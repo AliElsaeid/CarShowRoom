@@ -1,0 +1,139 @@
+/* cars.component.css */
+
+/* General Page Content Styles */
+.page-content {
+  background-color: #cedcf2; /* Grey-blue background color */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Heading Styles */
+h2 {
+  color: #4a4a4a; /* Dark gray text color */
+}
+
+/* Manufacturer Card Styles */
+.card {
+  background-color: #000; /* Clear black background for each manufacturer card */
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.manufacturer-image {
+  width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  opacity: 0.8; /* Reduced opacity for a more subtle background */
+}
+
+.card-title {
+  color: #333; /* Dark text color for card titles */
+}
+
+/* Model List Styles */
+.model-list {
+  list-style: none;
+  padding: 0;
+}
+
+.model-list-item {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth background color transition on hover */
+}
+
+.model-list-item:hover {
+  background-color: #e0e0e0; /* Light grey background on hover */
+}
+
+/* Detailed Information Section Styles */
+#detailSection {
+  display: none;
+  margin-top: 20px;
+  background-color: #000; /* Clear black background for detailed information section */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#modelTitle {
+  color: #673ab7;
+}
+
+#modelDescription,
+#modelPrice {
+  color: #fff; /* White text color for model description and price */
+}
+
+#modelImage {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Manufacturer Name Styles */
+.manufacturer-card h5 {
+  font-weight: bold;
+  color: #fff; /* White text color for manufacturer name */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  font-size: 1.5em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Model List Item Styles */
+.model-list-item {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: #fff; /* White text color for model list items */
+}
+
+.model-list-item:hover {
+  background-color: #555; /* Dark grey background on hover */
+}
+
+/* Small Image Styles */
+.small-image {
+  max-width: 100px; /* Adjust the maximum width as needed */
+  max-height: 100px; /* Adjust the maximum height as needed */
+}
+
+/* Model Image Styles */
+.model-image {
+  width: 50px;
+  height: 50px;
+}
+
+/* Detailed Model Image Styles */
+.detailed-model-image {
+  width: 600px;
+  height: 500;
+}
+
+/* ... other styles ... */
+/* ... other styles ... */
+
+/* Model Image Styles */
+.model-image {
+  width: 100%; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners for the model image */
+}
+
+/* Detailed Model Image Styles */
+.detailed-model-image {
+  width: 100%; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners for the detailed model image */
+}
+
+
+
+/* ... other styles ... */

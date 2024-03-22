@@ -1,0 +1,53 @@
+
+<div class="container mt-5" [style.backgroundImage]="'url(' + imageSrc + ')'">
+  
+    <h2>Reserve Your Car Here</h2>
+    <form #purchaseForm="ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="firstName">First Name</label>
+        <input type="text" class="form-control" id="firstName" placeholder="Enter your first name" required>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="lastName">Last Name</label>
+        <input type="text" class="form-control" id="lastName" placeholder="Enter your last name" required>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="nationalID">National ID</label>
+        <input type="text" class="form-control" id="nationalID" placeholder="Enter your national ID" required>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+      </div>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="contactNumber">Contact Number</label>
+      <input type="tel" class="form-control" id="contactNumber" placeholder="Enter your contact number" required>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="brand">Brand</label>
+        <select id="brand" name="brand" class="form-control" [(ngModel)]="selectedBrand" required>
+          <option value="" selected disabled>Select a Brand</option>
+          <option *ngFor="let brand of brands" [value]="brand">{{ brand }}</option>
+        </select>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="model">Model</label>
+        <select id="model" name="model" class="form-control" required>
+          <option value="" selected disabled>Select a Model</option>
+          <option *ngFor="let model of models[selectedBrand]" [value]="model">{{ model }}</option>
+        </select>
+      </div>
+    </div>
+    
+
+    <button type="submit" class="btn btn-primary">Submit Purchase Order</button>
+  </form>
+  <div *ngIf="showConfirmation" class="confirmation-message">
+    Thank you for choosing us! An email will be sent to you with the details.
+</div>
+</div>

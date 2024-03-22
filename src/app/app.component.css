@@ -1,0 +1,74 @@
+/* Reset some default styles for the list and anchor elements */
+  
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000; /* Set background color as desired */
+    padding: 10px; /* Add padding for better spacing */
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  li {
+    margin-right: 15px; /* Adjust spacing between list items */
+  }
+  
+  /* Style the anchor (link) elements */
+  a {
+    text-decoration: none;
+    color: white; /* Set text color as desired */
+    padding: 5px 10px; /* Add padding to make the clickable area larger */
+    border-radius: 5px; /* Add rounded corners to the links */
+  }
+  
+  /* Style the active link */
+  a.active {
+    background-color: #000000; /* Set a background color for the active link */
+  }
+  
+  /* Style the menu toggle button */
+  .menu-toggle {
+    font-size: 20px;
+    cursor: pointer;
+    color: white; /* Set color as desired */
+  }
+  
+  /* Media query for responsiveness (adjust as needed) */
+  @media (max-width: 768px) {
+    ul {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    li {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+  .nav-link img {
+    width: 60px; /* Adjust the width as needed */
+    height: 60px; /* Adjust the height as needed */
+    border-radius: 50%; /* Make it rounded */
+    margin-right: 8px; /* Add some margin for spacing */
+  }
+  /* Add this to your CSS file or style section */
+h5 {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 24px; /* Adjust the font size as needed */
+  margin: auto;
+  position: absolute;
+  color: white;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-style: italic;
+  z-index: 1;
+}

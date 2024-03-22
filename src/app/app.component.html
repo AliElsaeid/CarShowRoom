@@ -1,0 +1,21 @@
+<body>
+
+  <nav>
+    <ul>
+      <li class="header-comp">
+        <a class="nav-link active" aria-current="page">
+          <img src="{{ logoImagePath }}" alt="Prime wheels logo">
+        </a>
+      </li>
+      <li ><a class="nav-link " [routerLink]="['/home']">logout</a></li>
+      <li ><a class="nav-link" [routerLink]="['/brands']">Our Brands</a></li>
+      <li ><a class="nav-link" [routerLink]="['/cars']">Our Models</a></li>
+      <li ><a class="nav-link" [routerLink]="['/purchase']">Purschase</a></li>
+      <li ><a class="nav-link" [routerLink]="['/contact']">Contact Us</a></li>
+
+      
+    </ul>
+  </nav>
+</body>
+
+<router-outlet></router-outlet>

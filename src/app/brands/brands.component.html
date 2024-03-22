@@ -1,0 +1,20 @@
+<body [style.backgroundImage]="'url(' + imageSrc + ')'" class="background-container">
+
+<div *ngIf="hoveredBrand" class="hovered-info">
+    <!-- <h2 id="brandName">{{ hoveredBrand.name }}</h2>
+    <p id="brandDescription">{{ hoveredBrand.description }}</p> -->
+  </div>
+  
+  <section class="category" [attr.id]="category.id" *ngFor="let category of categories">
+    <div class="card" (mouseover)="showInfo(category)" (mouseout)="hideInfo()">
+      <div class="info">
+      <h2>{{ category.name }}</h2>
+       <p>{{ category.description }}</p>
+      </div>
+      <img [src]="category.logo" alt="[Manufacturer Logo]" class="brand-image">
+      <button class="nav-button"  routerLink="/cars" routerLinkActive="active">View Models</button>
+    </div>
+  </section>
+  
+  
+</body>

@@ -1,0 +1,25 @@
+<body [style.backgroundImage]="'url(' + imageSrc + ')'" class="background-container">
+  <header>
+    <div class="logo-container">
+      <img [src]="imageSrc1" alt="Logo Name">
+      <p>The Garage</p>
+      <p>Welcome to The Garage Showroom! Discover the latest cars from top brands in a cool, modern space. Try out interactive displays. Come visit us—it's where cool cars and a great experience meet!</p>
+    </div>
+
+    <div class="container d-flex justify-content-center align-items-start">
+      <form [formGroup]="form">
+        <div class="mb-3">
+          <label for="loginEmail" class="form-label" style="color: #f2f2f2;">Email address</label>
+          <input type="email" class="form-control" id="loginEmail" formControlName="loginEmail" required>
+        </div>
+        <div class="mb-3">
+          <label for="loginPassword" class="form-label" style="color: #f2f2f2;">Password</label>
+          <input type="password" class="form-control" id="loginPassword" formControlName="loginPassword" required>
+        </div>
+
+        <button class="nav-button" (click)="onLoginSubmit()">Login</button>
+        <button class="nav-button" routerLink="/register" routerLinkActive="active">Register</button>
+      </form>
+    </div>
+  </header>
+</body>

@@ -1,0 +1,46 @@
+<body [style.backgroundImage]="'url(' + imageSrc + ')'" class="background-container">
+    <header>
+      <div class="logo-container">
+        <img [src]="imageSrc1" alt="Logo Name">
+        <p>The Garage</p>
+        <p>Welcome to The Garage Showroom! Discover the latest cars from top brands in a cool, modern space. Try out
+          interactive displays. Come visit us—it's where cool cars and a great experience meet!</p>
+      </div>
+  
+      <div class="container d-flex justify-content-center align-items-start">
+        <form [formGroup]="form" (ngSubmit)="onRegisterSubmit()">
+            <div class="form-group">
+         
+          <div class="mb-3">
+            <label for="firstName" class="form-label" style="color: #f2f2f2;">First Name</label>
+            <input type="text" class="form-control" id="firstName" formControlName="firstName" required>
+          </div>
+          <div class="mb-3">
+            <label for="lastName" class="form-label" style="color: #f2f2f2;">Last Name</label>
+            <input type="text" class="form-control" id="lastName" formControlName="lastName" required>
+          </div>
+          <div class="mb-3">
+            <label for="country" class="form-label" style="color: #f2f2f2;">Country</label>
+            <input type="text" class="form-control" id="country" formControlName="country" required>
+          </div>
+          <div class="mb-3">
+            <label for="city" class="form-label" style="color: #f2f2f2;">City</label>
+            <input type="text" class="form-control" id="city" formControlName="city" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label" style="color: #f2f2f2;">Email address</label>
+            <input type="email" class="form-control" id="email" formControlName="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label" style="color: #f2f2f2;">Password</label>
+            <input type="password" class="form-control" id="password" formControlName="password" required>
+          </div>
+  
+          <button class="nav-button" routerLink="/home" routerLinkActive="active">Register</button>
+          <p class="mt-3" style="color: rgb(255, 255, 255);"  >Already have an account? <a href="/home">Login here</a></p>
+          </div>
+        </form>
+      </div>
+    </header>
+  </body>
+  

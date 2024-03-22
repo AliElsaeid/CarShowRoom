@@ -1,0 +1,23 @@
+ <!-- Manufacturer Cards with Car Models -->
+ <div class="card-deck">
+  <div class="card manufacturer-card" *ngFor="let manufacturer of manufacturers">
+    <img [src]="manufacturer.image" alt="{{ manufacturer.name }}" class="manufacturer-image small-image">
+    <div class="card-body">
+      <h5 class="card-title text-center mb-3">{{ manufacturer.name }}</h5>
+      <ul class="model-list">
+        <!-- Model List Items -->
+        <li class="model-list-item" *ngFor="let model of manufacturer.models" (click)="showDetails(manufacturer.name, model.name)">
+          <img [src]="model.img" class="model-image" [style.width.px]="50" [style.height.px]="50">
+          {{ model.name }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- Detailed Information Section (hidden by default) -->
+<div id="detailSection">
+  <h2 id="modelTitle" class="mb-3">{{ selectedModelDetails?.title }}</h2>
+  <p id="modelDescription" class="mb-3">{{ selectedModelDetails?.description }}</p>
+  <p id="modelPrice" class="mb-3">{{ selectedModelDetails?.price }}</p>
+  <img id="modelImage" [src]="selectedModelDetails?.image" alt="Car Image" class="detailed-model-image" [style.width.px]="500" [style.height.px]="500">
+</div>
